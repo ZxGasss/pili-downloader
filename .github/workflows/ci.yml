@@ -1,0 +1,11 @@
+name: Swift quality
+on: [push, pull_request]
+jobs:
+  core-and-app:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - name: Shared core tests
+        run: swift test
+      - name: Full macOS app typecheck
+        run: swiftc -swift-version 5 -parse-as-library -typecheck Sources/*.swift

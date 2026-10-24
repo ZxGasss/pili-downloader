@@ -1,0 +1,12 @@
+work/
+outputs/
+.cache/
+.build/
+.DS_Store
+*.xcuserstate
+session*.json
+tasks.json
+metadata-v1.json
+media-library-v2.json
+*.p12
+*.key

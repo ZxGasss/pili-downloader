@@ -1,0 +1,229 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23DF85DA94784FF951B7B9D5 /* ../../Sources/EpisodeBatches.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED72E7149A586F9E2525A84E /* ../../Sources/EpisodeBatches.swift */; };
+		2FD19722551ED9FA4229467F /* ../../Sources/AdvancedOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5555E21A86FCBEB6DF51C99 /* ../../Sources/AdvancedOptions.swift */; };
+		79D62DC6EFE7ED4CE804F1DC /* ../../Sources/Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284BDA58FFBB4DB4E7A32E15 /* ../../Sources/Models.swift */; };
+		8BE6B467E2D05AFC2B223248 /* BananaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4477F2F1046FF886E6A8ADEC /* BananaApp.swift */; };
+		F3315A493006F88AAB004EFE /* ../../Sources/Episodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D787B33947AE75F987A062CA /* ../../Sources/Episodes.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		284BDA58FFBB4DB4E7A32E15 /* ../../Sources/Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ../../Sources/Models.swift; sourceTree = SOURCE_ROOT; };
+		4477F2F1046FF886E6A8ADEC /* BananaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BananaApp.swift; sourceTree = SOURCE_ROOT; };
+		A8792157CB4F27FB949C035F /* Banana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = Banana.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5555E21A86FCBEB6DF51C99 /* ../../Sources/AdvancedOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ../../Sources/AdvancedOptions.swift; sourceTree = SOURCE_ROOT; };
+		D787B33947AE75F987A062CA /* ../../Sources/Episodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ../../Sources/Episodes.swift; sourceTree = SOURCE_ROOT; };
+		ED72E7149A586F9E2525A84E /* ../../Sources/EpisodeBatches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ../../Sources/EpisodeBatches.swift; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E2AA269EB967A8853A258BFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A3E27B8CA818264D75C8D81 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A8792157CB4F27FB949C035F /* Banana.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AD936FCBED631FA67E05C3EA = {
+			isa = PBXGroup;
+			children = (
+				4477F2F1046FF886E6A8ADEC /* BananaApp.swift */,
+				284BDA58FFBB4DB4E7A32E15 /* ../../Sources/Models.swift */,
+				C5555E21A86FCBEB6DF51C99 /* ../../Sources/AdvancedOptions.swift */,
+				D787B33947AE75F987A062CA /* ../../Sources/Episodes.swift */,
+				ED72E7149A586F9E2525A84E /* ../../Sources/EpisodeBatches.swift */,
+				0A3E27B8CA818264D75C8D81 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		34A04005BCAF206EEC990BD9 /* Banana */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28A8BB66987DD87BDA946B2E /* Build configuration list for PBXNativeTarget "Banana" */;
+			buildPhases = (
+				878A52FC5FF6A57D50B7B870 /* Sources */,
+				E2AA269EB967A8853A258BFA /* Frameworks */,
+				41D311A605520FC7B8B9A980 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Banana;
+			productName = Banana;
+			productReference = A8792157CB4F27FB949C035F /* Banana.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		244210E48437B6556980A702 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1640;
+			};
+			buildConfigurationList = D69E6ABAEE8D1F0F03292F91 /* Build configuration list for PBXProject "Banana" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = "zh-Hans";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				"zh-Hans",
+				Base,
+			);
+			mainGroup = AD936FCBED631FA67E05C3EA;
+			productRefGroup = 0A3E27B8CA818264D75C8D81 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				34A04005BCAF206EEC990BD9 /* Banana */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		41D311A605520FC7B8B9A980 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		878A52FC5FF6A57D50B7B870 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BE6B467E2D05AFC2B223248 /* BananaApp.swift in Sources */,
+				79D62DC6EFE7ED4CE804F1DC /* ../../Sources/Models.swift in Sources */,
+				2FD19722551ED9FA4229467F /* ../../Sources/AdvancedOptions.swift in Sources */,
+				F3315A493006F88AAB004EFE /* ../../Sources/Episodes.swift in Sources */,
+				23DF85DA94784FF951B7B9D5 /* ../../Sources/EpisodeBatches.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0B8E9E995D8D77F1E4770F0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 17;
+				DEVELOPMENT_TEAM = CA3WCPLZBP;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "大香蕉播放器";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_UIFileSharingEnabled = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.5.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pan.banana;
+				PRODUCT_NAME = Banana;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PILI_SHARED_CORE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4D1F64EF1FBF36A9BEC53788 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COPY_PHASE_STRIP = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		695A95D0955046EA56DF3A06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A4D451EC23463726F72C43D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 17;
+				DEVELOPMENT_TEAM = CA3WCPLZBP;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "大香蕉播放器";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_UIFileSharingEnabled = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.5.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pan.banana;
+				PRODUCT_NAME = Banana;
+				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PILI_SHARED_CORE;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		28A8BB66987DD87BDA946B2E /* Build configuration list for PBXNativeTarget "Banana" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B8E9E995D8D77F1E4770F0F /* Debug */,
+				A4D451EC23463726F72C43D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D69E6ABAEE8D1F0F03292F91 /* Build configuration list for PBXProject "Banana" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				695A95D0955046EA56DF3A06 /* Debug */,
+				4D1F64EF1FBF36A9BEC53788 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 244210E48437B6556980A702 /* Project object */;
+}

@@ -1,0 +1,41 @@
+import Foundation
+
+@main struct MediaClassifierTests {
+    static func main() async throws {
+        precondition(MediaRuleClassifier.classify(relativePath: "动画/测试番/S01E01.mkv", duration: 1440, siblingCount: 12).category == .animation)
+        precondition(MediaRuleClassifier.classify(relativePath: "电影/测试电影.mp4", duration: 7200, siblingCount: 1).category == .movie)
+        precondition(MediaRuleClassifier.classify(relativePath: "剧集/测试剧/第3集.mp4", duration: 2700, siblingCount: 1).category == .series)
+        precondition(MediaRuleClassifier.classify(relativePath: "合集/01 - 标题.mp4", duration: nil, siblingCount: 20).category == .series)
+        precondition(MediaRuleClassifier.classify(relativePath: "下载/未知.mp4", duration: 120, siblingCount: 1).category == .pending)
+        precondition(MediaRuleClassifier.classify(relativePath: "下载/长片.mp4", duration: 5400, siblingCount: 1).category == .movie)
+        let root = FileManager.default.temporaryDirectory.appendingPathComponent("pili-organizer-\(UUID().uuidString)")
+        try FileManager.default.createDirectory(at: root, withIntermediateDirectories: true)
+        try Data([1]).write(to: root.appendingPathComponent("01 - 剧情标题.mp4"))
+        try Data([1]).write(to: root.appendingPathComponent("02 - 另一标题.mp4"))
+        let plan = await MediaLibraryOrganizer.plan(folder: root, ffmpeg: nil)
+        precondition(plan.items.count == 2)
+        precondition(plan.items.contains { URL(fileURLWithPath: $0.newPath).lastPathComponent.hasPrefix("001 - 剧情标题 - ") })
+        precondition(plan.items.contains { URL(fileURLWithPath: $0.newPath).lastPathComponent.hasPrefix("002 - 另一标题 - ") })
+        let count = try MediaLibraryOrganizer.apply(plan)
+        precondition(count == 2)
+        precondition(plan.items.allSatisfy { FileManager.default.fileExists(atPath: $0.newPath) && !FileManager.default.fileExists(atPath: $0.oldPath) })
+        try FileManager.default.removeItem(at: root)
+        let folderRoot = FileManager.default.temporaryDirectory.appendingPathComponent("pili-folder-\(UUID().uuidString)")
+        let animation = folderRoot.appendingPathComponent("动画/Show")
+        let movieA = folderRoot.appendingPathComponent("电影/A")
+        let movieB = folderRoot.appendingPathComponent("电影/B")
+        for directory in [animation, movieA, movieB] { try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true) }
+        try Data([1]).write(to: animation.appendingPathComponent("01 - Pilot.mp4"))
+        try Data([2]).write(to: movieA.appendingPathComponent("Same.mp4"))
+        try Data([2]).write(to: movieB.appendingPathComponent("Same.mp4"))
+        let folderPlan = await MediaLibraryOrganizer.folderPlan(folder: folderRoot, ffmpeg: nil)
+        precondition(folderPlan.items.contains { $0.category == "动画" && $0.newPath.contains("/动画/") })
+        precondition(folderPlan.items.contains { $0.category == "电影" && $0.newPath.contains("/电影/") })
+        precondition(folderPlan.items.contains(where: \.duplicate))
+        _ = try MediaLibraryOrganizer.apply(folderPlan)
+        precondition(FileManager.default.fileExists(atPath: folderRoot.appendingPathComponent("动画").path))
+        precondition(FileManager.default.fileExists(atPath: folderRoot.appendingPathComponent("电影").path))
+        try FileManager.default.removeItem(at: folderRoot)
+        print("MEDIA_CLASSIFIER_PASS rules; evidence boundaries; rename plan/apply 001/002 sequence")
+    }
+}

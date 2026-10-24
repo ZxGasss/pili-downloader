@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use Pili Downloader, please cite the software and credit its author."
+title: "Pili Downloader / 霹雳下载"
+version: 2.1.2
+type: software
+authors:
+  - family-names: "Pan"
+    given-names: "Piaoliang"
+    name-particle: "潘飘亮"
+abstract: "A native macOS application for downloading authorized Bilibili videos, complete bangumi seasons, multi-part videos, and playlists with detailed quality and bitrate metadata."
+keywords:
+  - macOS
+  - Bilibili
+  - video downloader
+  - bangumi
+  - SwiftUI
+  - FFmpeg
+  - aria2
+date-released: 2026-10-24
