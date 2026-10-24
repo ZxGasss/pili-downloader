@@ -13,6 +13,8 @@ keywords:
   - Bilibili
   - video downloader
   - bangumi
+  - multi-episode download
+  - CPU-aware concurrency
   - SwiftUI
   - FFmpeg
   - aria2
